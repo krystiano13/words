@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('definitions', function (Blueprint $table) {
+        Schema::create('words', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->longText('definition_text');
+            $table->string('name');
         });
     }
 
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('definitions');
+        Schema::dropIfExists('words');
     }
 };

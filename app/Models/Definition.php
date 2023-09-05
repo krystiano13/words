@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Definition extends Model
 {
@@ -13,6 +14,8 @@ class Definition extends Model
     protected $primary_key = 'id';
 
     protected $fillable = [
-        'definition_text'
+        'definition_text',
+        'word_id'
     ];
+
 }

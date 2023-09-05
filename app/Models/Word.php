@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Word extends Model
 {
@@ -15,11 +14,10 @@ class Word extends Model
 
     protected $fillable = [
         'name',
-        'definition_id'
     ];
 
-    public function definition(): HasOne {
-        return $this -> hasOne(Definition::class, 'definition_id');
+    public function definition() {
+        return $this -> hasOne(Definition::class,'word_id');
     }
-
+    
 }
