@@ -14,4 +14,4 @@ Route::get('/loginView', fn() => view('login'));
 
 Route::post('/register',[UserController::class,'register']);
 Route::post('/addWord',[WordController::class, 'add']);
-Route::put('/addDefinition/{word_id}', [DefinitionController::class, 'add']);
+Route::post('/addDefinition/{word_id}', [DefinitionController::class, 'add']);

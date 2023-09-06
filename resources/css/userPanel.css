@@ -1,0 +1,40 @@
+.userPanel {
+    min-width : 100vw;
+    min-height : 4rem;
+    background-color: var(--primary);
+
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left : 2rem;
+    padding-right: 2rem;
+}
+
+.userPanel .userSection {
+    font-family: 'Montserrat' , sans-serif;
+    font-size : 1.25rem;
+    height : 100%;
+}
+
+.userPanel .userButtons button {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    font-family: 'Montserrat' , sans-serif;
+    border-radius: 0.5rem;
+
+    padding-left : 2rem;
+    padding-right : 2rem;
+    padding-top : 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.userPanel .userButtons button:hover {
+    background-color: var(--background);
+}

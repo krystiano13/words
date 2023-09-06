@@ -24,6 +24,8 @@
     text-align: center;
     font-size : 1.1rem;
     border-radius: 2rem;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 .accountForm input {
