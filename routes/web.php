@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/registerView', fn() => view('register'));
+Route::get('/loginView', fn() => view('login'));
 
 Route::post('/register',[UserController::class,'register']);
 Route::post('/addWord',[WordController::class, 'add']);
