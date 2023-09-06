@@ -5,16 +5,19 @@
         <div class="userPanel">
             <section class="userSection">
                 @auth
-                    <h1>Welcome {{ auth() -> user() }}</h1>
+                    <h1>{{ auth() -> user() -> name }}</h1>
                 @endauth
             </section>
             <div class="userButtons">
                 @auth
-                    <button>Add Word</button>
-                    <button>Logout</button>
+                    <a href="/">Add Word</a>
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>           
                 @else
-                    <button>Login</button>
-                    <button>Reguster</button>
+                    <a href="/loginView">Login</a>
+                    <a href="/registerView">Register</a>
                 @endauth
             </div>
         </div>
