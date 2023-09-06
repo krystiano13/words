@@ -1,0 +1,23 @@
+*,*::before,*::after {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #f2fcf5;
+    --background: #082b12;
+    --primary: #3fd968;
+    --secondary: #041509;
+    --accent: #26c04f;
+}
+
+body {
+    width : 100vw;
+    height : 100vh;
+    background-color: var(--background);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
