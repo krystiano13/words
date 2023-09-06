@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class WordController extends Controller
 {
+    public function render() {
+        $words = Word::all();
+        return view('home', [ 'words' => $words ]);
+    }
+
     public function add(Request $request) {
        $fields = $request -> validate([
             'name' => ['required']

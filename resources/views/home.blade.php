@@ -22,7 +22,12 @@
             </div>
         </div>
         <div class="words">
-
+           @foreach ($words as $word)
+                <a id={{ $word -> id }} class="word">
+                    <h2 class="wordName">{{ $word -> name }}</h2>
+                    <h3 class="wordDate">Created at : {{ $word -> created_at }}</h3>
+                </a>
+           @endforeach
         </div>
     </main>
 @endsection

@@ -5,9 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [WordController::class, 'render']);
 
 Route::get('/registerView', fn() => view('register'));
 Route::get('/loginView', fn() => view('login'));
