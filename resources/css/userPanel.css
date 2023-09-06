@@ -1,7 +1,10 @@
 .userPanel {
     min-width : 100vw;
-    min-height : 4rem;
+    height : 4rem;
     background-color: var(--primary);
+    position: sticky;
+    top: 0;
+
 
     display : flex;
     align-items: center;
@@ -14,12 +17,16 @@
 .userPanel .userSection {
     font-family: 'Montserrat' , sans-serif;
     font-size : 1.25rem;
-    height : 100%;
+    height : 4rem;
+
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width : 992px) {
         font-size : 0.75rem;
     }
-}
+}  
+
 
 .userPanel .userButtons {
     display: flex;

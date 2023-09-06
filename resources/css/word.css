@@ -1,0 +1,113 @@
+.wordSection {
+    min-width : 100vw;
+    height : calc(100vh - 4rem);
+
+    display : flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.wordSection .name, .wordSection .creationDate, .wordSection .definition {
+    background-color: var(--secondary);
+    color : var(--text);
+    margin : 1%;
+    height : 45%;
+    border-radius: 2rem;
+}
+
+
+.wordSection .name {
+    width : 45%;
+    font-size : 1.6em;
+    padding : 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width : 992px) {
+        font-size : 1.1em;
+        min-height: 5rem;
+        width : 92%;
+        height: 15%;
+    }
+}
+
+.wordSection .name h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wordSection .creationDate {
+    width : 45%;
+    font-family: 'Montserrat', sans-serif;
+    padding : 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width : 992px) {
+        min-height: 5rem;
+        width : 92%;
+        height: 15%;
+    }
+}
+
+.wordSection .creationDate > * {
+   margin : 1rem;
+   font-size : 1.6em;
+   text-align: center;
+}
+
+.wordSection .definition {
+    width : 92%;
+    margin : 1%;
+    padding : 2rem;
+    font-family: 'Montserrat', sans-serif;
+
+    @media screen and (max-width : 992px) {
+        width : 92%;
+        height: 60%;
+        min-height: 15rem;
+    }
+}
+
+.wordSection .definition p {
+    font-family: 'Inter', sans-serif;
+    margin-top: 1rem;
+    max-width: 50%;
+
+    @media screen and (max-width : 992px) {
+        max-width : 80%;
+    }
+}
+
+.wordSection .definition a {
+    background-color: var(--primary);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top : 1rem;
+    padding-left : 2rem;
+    padding-right : 2rem;
+    padding-top : 0.75rem;
+    padding-bottom: 0.75rem;
+    text-decoration: none;
+    color : var(--text);
+    font-weight: 500;
+    border-radius: 1rem;
+
+    transition: background-color 250ms;
+    will-change: background-color;
+}
+
+.wordSection .definition a:hover {
+    background-color: var(--accent);
+}
+
+
+
+
+

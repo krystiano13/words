@@ -22,14 +22,26 @@
         </div>
     </div>
     <div class="wordSection">
-        <h2 class="word">{{ $word[0] -> name }}</h2>
-        <h3 class="date">Created at: {{ $word[0] -> created_at }}</h3>
-        <h2 class="desc">Description:</h2>
-        @if (isset($text))
-            <p>{{ $text }}</p>
-        @else
-            <p>This word hasn't got his definition</p>
-        @endif
+        <section class="name">
+            <h2 class="title">{{ $word[0] -> name }}</h2>
+        </section>
+        <section class="creationDate">
+            <h2 class="title">Created at:</h2>
+            <h3 class="date">{{ $word[0] -> created_at }}</h3>
+        </section>
+        <section class="definition">
+            <h2 class="title">Definition:</h2>
+            @if (isset($text))
+                <p>{{ $text }}</p>
+            @else
+                <p>This word hasn't got its definition</p>
+
+                @auth
+                    <p>You can add it using this button</p>
+                    <a href="/addDefinition">Add</a>
+                @endauth
+            @endif
+        </section>
     </div>
 </main>
 @endsection
