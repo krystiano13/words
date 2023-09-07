@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class DefinitionController extends Controller
 {
+    public function form($word_id) {
+        $wordQuery = Word::where('id',$word_id);
+        if($wordQuery -> count() <= 0) return redirect('/');
+
+        return view('form', ['mode' => 'partial', 'word_id' => $word_id]);
+    }
+
     public function render($word_id) {
         $query = Definition::where('word_id', $word_id);
         $count =  $query -> count();

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class WordController extends Controller
 {
+
     public function render() {
         $words = Word::all();
         return view('home', [ 'words' => $words ]);
