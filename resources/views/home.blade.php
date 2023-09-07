@@ -10,7 +10,7 @@
             </section>
             <div class="userButtons">
                 @auth
-                    <a href="/">Add Word</a>
+                    <a href="/wordForm/word">Add Word</a>
                     <form method="POST" action="/logout">
                         @csrf
                         <button type="submit">Logout</button>

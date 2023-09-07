@@ -10,7 +10,7 @@
         </section>
             <div class="userButtons">
             @auth
-                <a href="/">Add Word</a>
+                <a href="/wordForm/word">Add Word</a>
                 <form method="POST" action="/logout">
                     @csrf
                     <button type="submit">Logout</button>
@@ -38,7 +38,7 @@
 
                 @auth
                     <p>You can add it using this button</p>
-                    <a href="/addDefinition">Add</a>
+                    <a href="/wordForm/definition/{{ $word[0] -> id }}">Add</a>
                 @endauth
             @endif
         </section>

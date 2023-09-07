@@ -24,7 +24,7 @@ class WordController extends Controller
 
        if($request -> get('definition_text')) {
             $text = $request -> get('definition_text');
-            $valid = $validator::make($text, ['definition_text' => 'required']);
+            $valid = $validator::make($request -> all(), ['definition_text' => 'required']);
             if($valid -> fails()) return redirect('/');
 
             $text = strip_tags($text);
