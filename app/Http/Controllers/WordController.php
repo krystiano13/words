@@ -10,12 +10,18 @@ use Illuminate\Support\Facades\Validator;
 class WordController extends Controller
 {
 
+    public function form() {
+        if(!auth() -> check()) return redirect('/');
+        return view('form', ['mode' => 'all']);
+    }
+
     public function render() {
         $words = Word::all();
         return view('home', [ 'words' => $words ]);
     }
 
     public function add(Request $request, Validator $validator) {
+       if(!auth() -> check()) return redirect('/');
        $fields = $request -> validate([
             'name' => ['required']
        ]);

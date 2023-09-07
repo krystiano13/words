@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class DefinitionController extends Controller
 {
     public function form($word_id) {
+        if(!auth() -> check()) return redirect('/');
         $wordQuery = Word::where('id',$word_id);
         if($wordQuery -> count() <= 0) return redirect('/');
 
@@ -38,6 +39,7 @@ class DefinitionController extends Controller
     }
 
     public function add($word_id,Request $request) {
+        if(!auth() -> check()) return redirect('/');
         $fields = $request -> validate([
             'definition_text' => 'required'
         ]);
