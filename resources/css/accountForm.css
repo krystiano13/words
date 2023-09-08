@@ -33,7 +33,6 @@
     margin-bottom: 1.5rem;
     text-align: center;
     font-size : 1.1rem;
-    border-radius: 2rem;
 
     font-family: 'Montserrat', sans-serif;
 }
@@ -54,23 +53,27 @@
     padding-bottom: 0.5rem;
     outline: none;
     background-color: transparent;
-    border: solid var(--accent) 2px;
+    border: none;
+    border-bottom: solid #0d411b 2px;
     color : var(--text);
+    background-color: #07220f;
+    font-size : 1.05rem;
 
     transition: border-color 250ms, color 250ms;
 }
 
 .accountForm input::placeholder {
-    color : var(--primary);
+    color : #178835;
     transform: color 250ms;
 }
 
-.accountForm input:focus::placeholder {
-    color: var(--text);
-}
 
 .accountForm input:focus {
     border-color: var(--text);
+}
+
+.accountForm input:focus::placeholder {
+    color : var(--text);
 }
 
 .accountForm button {
@@ -81,6 +84,7 @@
     padding-right : 2rem;
     padding-top : 0.75rem;
     padding-bottom: 0.75rem;
+    border-radius: 2rem;
 
     transition: background-color 250ms;
     will-change: background-color;
