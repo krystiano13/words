@@ -56,3 +56,9 @@ Simple app, that allows users to add words and definitions.
 ```bash
     php artisan migrate
 ```
+
+8. Run Vite
+
+```bash
+    npm run dev
+```
