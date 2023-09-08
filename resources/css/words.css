@@ -25,6 +25,22 @@
 
     transition: background-color 250ms;
     will-change: background-color;
+
+   @media screen and (min-width : 2400px) {
+        margin : 1.5rem;
+        margin-top : 2rem;
+        margin-bottom : 2rem;
+        padding : 3rem;
+        border-radius: 1.25rem;
+   }
+
+    @media screen and (min-width : 3200px) {
+        margin : 3rem;
+        margin-top : 4rem;
+        margin-bottom : 4rem;
+        padding : 5rem;
+        border-radius: 1.5rem;
+   }
 }
 
 .words .word:hover {
@@ -38,8 +54,24 @@
 
 .wordName {
     font-family: 'Montserrat', sans-serif;
+
+    @media screen and (min-width : 2400px) {
+       font-size : 2rem;
+    }
+
+    @media screen and (min-width : 3200px) {
+        font-size : 3rem;
+    }
 }
 
 .wordDate {
     font-family: 'Inter', sans-serif;
+
+    @media screen and (min-width : 2400px) {
+       font-size : 2rem;
+    }
+
+    @media screen and (min-width : 3200px) {
+        font-size : 3rem;
+    }
 }

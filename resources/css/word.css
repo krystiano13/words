@@ -43,6 +43,14 @@
 
 .wordSection .name h2 {
     font-family: 'Montserrat', sans-serif;
+
+    @media screen and (min-width : 2400px){
+        font-size : 2.25rem;
+    }
+
+    @media screen and (min-width : 3200px){
+        font-size : 2.8rem;
+    }
 }
 
 .wordSection .creationDate {
@@ -77,6 +85,16 @@
         margin : 0.4rem;
         font-size : 1rem;
     }
+
+    @media screen and (min-width : 2400px){
+        margin : 1.6rem;
+        font-size : 2rem;
+    }
+
+    @media screen and (min-width : 3200px){
+        margin : 2.4rem;
+        font-size : 2.6rem;
+    }
 }
 
 .wordSection .definition {
@@ -94,10 +112,24 @@
 
 }
 
+.wordSection .definition .title {
+     @media screen and (min-width : 2400px){
+        margin : 1.6rem;
+        margin-left : 0;
+        font-size : 2rem;
+    }
+
+    @media screen and (min-width : 3200px){
+        margin : 2.4rem;
+        margin-left : 0;
+        font-size : 2.6rem;
+    }
+}
+
 .wordSection .definition p {
     font-family: 'Inter', sans-serif;
     margin-top: 1rem;
-    max-width: 50%;
+    max-width: 60%;
     font-size: 1.25rem;
 
     @media screen and (max-width : 992px) {
@@ -107,6 +139,16 @@
     @media screen and (max-width : 500px){
         font-size : 1rem;
         max-width : 90%;
+    }
+
+    @media screen and (min-width : 2400px) {
+        margin-top: 2rem;
+        font-size : 2.25rem;
+    }
+
+    @media screen and (min-width : 3200px) {
+        margin-top: 4rem;
+        font-size : 3rem;
     }
 }
 
@@ -127,6 +169,24 @@
 
     transition: background-color 250ms;
     will-change: background-color;
+
+    @media screen and (min-width : 2400px) {
+        margin-top: 2rem;
+        font-size : 2.25rem;
+        padding-left : 3rem;
+        padding-right : 3rem;
+        padding-top : 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    @media screen and (min-width : 3200px) {
+        margin-top: 4rem;
+        font-size : 3rem;
+        padding-left : 3rem;
+        padding-right : 3rem;
+        padding-top : 1.25rem;
+        padding-bottom: 1.25rem;
+    }
 
 }
 
