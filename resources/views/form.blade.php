@@ -1,6 +1,7 @@
 @extends('layout.index');
 
 @section('content')
+<div class="formContainer">
     <form 
         class="accountForm" 
         @if ($mode === "all")
@@ -17,4 +18,5 @@
         <textarea placeholder="definition" name="definition_text"></textarea>
         <button type="submit">ADD</button>
     </form>
+</div>
 @endsection

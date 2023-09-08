@@ -1,6 +1,7 @@
 @extends('layout.index')
 
 @section('content')
+<div class="formContainer">
     <form class="accountForm" action="/register" method="POST">
         @csrf
         <input placeholder="username" name="name" type="text" />
@@ -9,4 +10,5 @@
         <input placeholder="repeat password" name="password_confirmation" type="password" />
         <button type="submit">Create Account</button>
     </form>
+</div>
 @endsection
