@@ -35,6 +35,10 @@
         width : 92%;
         height: 15%;
     }
+
+    @media screen and (max-width : 500px){
+        font-size: 0.75rem;
+    }
 }
 
 .wordSection .name h2 {
@@ -58,12 +62,21 @@
         width : 92%;
         height: 15%;
     }
+
+    @media screen and (max-width : 500px){
+        padding : 2rem;
+    }
 }
 
 .wordSection .creationDate > * {
    margin : 1rem;
    font-size : 1.6em;
    text-align: center;
+
+    @media screen and (max-width : 500px){
+        margin : 0.4rem;
+        font-size : 1rem;
+    }
 }
 
 .wordSection .definition {
@@ -78,6 +91,7 @@
         height: 60%;
         min-height: 15rem;
     }
+
 }
 
 .wordSection .definition p {
@@ -88,6 +102,11 @@
 
     @media screen and (max-width : 992px) {
         max-width : 80%;
+    }
+
+    @media screen and (max-width : 500px){
+        font-size : 1rem;
+        max-width : 90%;
     }
 }
 
@@ -108,6 +127,7 @@
 
     transition: background-color 250ms;
     will-change: background-color;
+
 }
 
 .wordSection .definition a:hover {

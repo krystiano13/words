@@ -41,7 +41,7 @@ class DefinitionController extends Controller
     public function add($word_id,Request $request) {
         if(!auth() -> check()) return redirect('/');
         $fields = $request -> validate([
-            'definition_text' => 'required'
+            'definition_text' => ['required', 'min:1', 'max:240']
         ]);
 
         if($word_id) {
