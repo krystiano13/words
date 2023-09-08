@@ -32,6 +32,11 @@ class UserController extends Controller
         if(auth() -> attempt(['name' => $fields['name'], 'password' => $fields['password']])) {
             return redirect('/');
         }
+        else {
+            return redirect() -> back() -> withErrors(
+                ['fields' => 'Incorrect username or password']
+            );
+        }
     }
 
     public function logout() {

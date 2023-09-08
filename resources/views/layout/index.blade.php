@@ -14,6 +14,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    @yield('content')
+
+@if ($errors -> any())
+    <div class="errorPopup">
+        @foreach ($errors -> all() as $error)   
+            <p>{{ $error }}</p>       
+        @endforeach
+    </div>
+@endif
+
+@yield('content')
+
 </body>
 </html>
