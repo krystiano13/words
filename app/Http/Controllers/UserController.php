@@ -33,7 +33,7 @@ class UserController extends Controller
             return redirect('/');
         }
         else {
-            return redirect() -> back() -> withErrors(
+            return redirect() -> back() -> withInput() -> withErrors(
                 ['fields' => 'Incorrect username or password']
             );
         }
