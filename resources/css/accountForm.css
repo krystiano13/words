@@ -31,10 +31,22 @@
 .accountForm input, .accountForm button {
     margin-top : 1.5rem;
     margin-bottom: 1.5rem;
-    text-align: center;
     font-size : 1.1rem;
 
     font-family: 'Montserrat', sans-serif;
+}
+
+.accountForm input, .accountForm textarea {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid #0d411b 2px;
+    color : var(--text);
+    background-color: #07220f;
+    font-size : 1.05rem;
+    font-family: 'Montserrat', sans-serif;
+
+    transition: border-color 250ms, color 250ms;
 }
 
 .accountForm textarea {
@@ -43,6 +55,8 @@
     min-width : 15rem;
     min-height : 10rem;
     max-height : 50%;
+    padding : .5rem;
+    font-size : .9rem;
 }
 
 .accountForm input {
@@ -51,28 +65,18 @@
     padding-right : 1rem;
     padding-top : 0.5rem;
     padding-bottom: 0.5rem;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: solid #0d411b 2px;
-    color : var(--text);
-    background-color: #07220f;
-    font-size : 1.05rem;
-
-    transition: border-color 250ms, color 250ms;
 }
 
-.accountForm input::placeholder {
+.accountForm input::placeholder, .accountForm textarea::placeholder {
     color : #178835;
     transform: color 250ms;
 }
 
-
-.accountForm input:focus {
+.accountForm input:focus, .accountForm textarea:focus {
     border-color: var(--text);
 }
 
-.accountForm input:focus::placeholder {
+.accountForm input:focus::placeholder, .accountForm textarea:focus::placeholder {
     color : var(--text);
 }
 

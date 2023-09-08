@@ -15,7 +15,7 @@
         @if ($mode === "all")
             <input placeholder="Word name" name="name" type="text" />
         @endif
-        <textarea placeholder="definition" name="definition_text"></textarea>
+        <textarea placeholder="Definition" name="definition_text"></textarea>
         <button type="submit">ADD</button>
     </form>
 </div>
